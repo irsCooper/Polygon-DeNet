@@ -1,0 +1,11 @@
+services:
+  polygon-flask:
+    build: .
+    container_name: polygon-flask
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - .:/app
+    restart: always
